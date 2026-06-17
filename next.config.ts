@@ -23,7 +23,7 @@ const nextConfig: NextConfig = {
               value: 'resume.jaesonliang.com',
             },
           ],
-          destination: '/Jaeson_Liang_resume.pdf',
+          destination: '/Jaeson_Liang_Resume.pdf',
         },
         {
           source: '/',
@@ -60,7 +60,7 @@ const nextConfig: NextConfig = {
         headers: [
           {
             key: 'Content-Disposition',
-            value: 'attachment; filename="Jaeson_Liang_resume.pdf"',
+            value: 'attachment; filename="Jaeson_Liang_Resume.pdf"',
           },
         ],
       },
@@ -83,11 +83,11 @@ const nextConfig: NextConfig = {
         ],
       },
       {
-        source: '/Jaeson_Liang_resume.pdf',
+        source: '/Jaeson_Liang_Resume.pdf',
         headers: [
           {
             key: 'Content-Disposition',
-            value: 'attachment; filename="Jaeson_Liang_resume.pdf"',
+            value: 'attachment; filename="Jaeson_Liang_Resume.pdf"',
           },
         ],
       },
