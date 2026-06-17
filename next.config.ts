@@ -7,6 +7,26 @@ const nextConfig: NextConfig = {
       beforeFiles: [
         {
           source: '/',
+          has: [
+            {
+              type: 'host',
+              value: 'transcript.jaesonliang.com',
+            },
+          ],
+          destination: '/Jaeson_Liang_academic_statement.pdf',
+        },
+        {
+          source: '/',
+          has: [
+            {
+              type: 'host',
+              value: 'resume.jaesonliang.com',
+            },
+          ],
+          destination: '/Jaeson_Liang_resume.pdf',
+        },
+        {
+          source: '/',
           destination: '/Jaeson_Liang_academic_statement.pdf',
         },
       ],
@@ -14,6 +34,36 @@ const nextConfig: NextConfig = {
   },
   async headers() {
     return [
+      {
+        source: '/', 
+        has: [
+          {
+            type: 'host',
+            value: 'transcript.jaesonliang.com',
+          },
+        ],
+        headers: [
+          {
+            key: 'Content-Disposition',
+            value: 'attachment; filename="Jaeson_Liang_academic_statement.pdf"',
+          },
+        ],
+      },
+      {
+        source: '/',
+        has: [
+          {
+            type: 'host',
+            value: 'resume.jaesonliang.com',
+          },
+        ],
+        headers: [
+          {
+            key: 'Content-Disposition',
+            value: 'attachment; filename="Jaeson_Liang_resume.pdf"',
+          },
+        ],
+      },
       {
         source: '/', 
         headers: [
@@ -29,6 +79,15 @@ const nextConfig: NextConfig = {
           {
             key: 'Content-Disposition',
             value: 'attachment; filename="Jaeson_Liang_academic_statement.pdf"',
+          },
+        ],
+      },
+      {
+        source: '/Jaeson_Liang_resume.pdf',
+        headers: [
+          {
+            key: 'Content-Disposition',
+            value: 'attachment; filename="Jaeson_Liang_resume.pdf"',
           },
         ],
       },
